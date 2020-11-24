@@ -56,14 +56,14 @@ body {
 .navigace {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
     }
 
 .navigace li {
   display: flex;
   }
 .navigace a {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   color: #48418e;
   text-decoration: none;
   }
@@ -93,6 +93,11 @@ h3 {
   font-weight: 700;
 }
 
+.super-appka {
+  background-image: linear-gradient(to right, #25133d 25%, #aa5477 100%);
+  padding: 0 2rem;
+  }
+
 /*tlacitka v banneru*/
 .tlacitka {
   display: flex;
@@ -108,7 +113,7 @@ h3 {
   padding: 1rem 2rem;
   }
 
-.button a:hover {
+.button:hover {
   background-color: #48418e;
 }
 .button {
@@ -117,6 +122,8 @@ h3 {
   justify-content: center;
   margin: 0.5rem;
   }
+
+
 
 /*služby*/
 .sluzby h3 {
@@ -136,10 +143,7 @@ h3 {
   color: whitesmoke;
 }
 
-.super-appka {
-  background-image: linear-gradient(to right, #25133d 25%, #aa5477 100%);
-  padding: 0 2rem;
-}
+
 
 header h1,
 header h2,
@@ -151,17 +155,66 @@ header li {
  display: flex;
  flex-direction: column;
  align-items: center;
+ padding: 0 1rem;
 }
 
 
 
 /* tablet */
 @media screen and (min-width: 480px) {
+  .navigace {
+    justify-content: left;
+  }
+  .tlacitka {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: left;
+  }
+  .tlacitka li {
+    display: flex;
+    }
+  .button a {
+    padding: 0.5rem 1rem;
+  }
+  .button {
+    margin-left: 0;
+  }
+  .super-appka {
+    padding: 1rem 2rem;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  .sluzby {
+    display: flex;
+  }
+}
 
-
+/*PC*/
+@media screen and (min-width:860px) {
+  .super-appka {
+    background-image: 
+    url(images/telefon.png),
+    linear-gradient(to right, #25133d 25%, #aa5477 100%);
+    background-repeat: no-repeat;
+    background-position: 
+    right;
+    background-size: 28%, 100%;
+    padding: 1.5rem;
+    }
+  h1,
+  h2 {
+    width: 40%;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .tlacitka {
+    width: 35%;
   }
   
-
 }
 
 
